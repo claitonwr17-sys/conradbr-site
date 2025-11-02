@@ -23,12 +23,26 @@
       border-bottom: 2px solid #333;
     }
 
-    /* Logo com efeito de entrada */
-    header img {
-      width: 120px;
+    /* Novo layout: logo + título lado a lado */
+    .header-content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      width: 80px;
       height: auto;
-      display: block;
-      margin: 0 auto 10px;
+      opacity: 0;
+      animation: fadeIn 1.5s ease forwards;
+    }
+
+    .header-content h1 {
+      color: #00bfff;
+      font-size: 2em;
+      margin: 0;
       opacity: 0;
       animation: fadeIn 1.5s ease forwards;
     }
@@ -66,7 +80,7 @@
       margin-bottom: 60px;
     }
 
-    h1, h2 {
+    h2 {
       color: #00bfff;
     }
 
@@ -84,7 +98,11 @@
         margin: 10px 0;
       }
 
-      header img {
+      .header-content {
+        flex-direction: column;
+      }
+
+      .logo {
         width: 100px;
       }
     }
@@ -92,8 +110,10 @@
 </head>
 <body>
   <header>
-    <!-- Caminho da logo corrigido -->
-    <img src="logo.png" alt="Logo ConradBR">
+    <div class="header-content">
+      <img src="logo.png" alt="Logo Conrad" class="logo">
+      <h1>Bem-vindo ao Conrad</h1>
+    </div>
     <nav>
       <a href="#inicio">Início</a>
       <a href="#privacidade">Política de Privacidade</a>
@@ -103,7 +123,7 @@
 
   <main>
     <section id="inicio">
-      <h1>Bem-vindo ao Site Oficial do ConradBR</h1>
+      <h2>Bem-vindo ao Site Oficial do ConradBR</h2>
       <p>Esta é a página de documentação oficial do aplicativo <strong>Conrad</strong>. Aqui você encontra informações sobre as políticas de privacidade, termos de uso e funcionamento do app.</p>
     </section>
 
