@@ -15,7 +15,7 @@
 
     header {
       background-color: #111;
-      padding: 20px 0;
+      padding: 20px 0 10px 0;
       position: sticky;
       top: 0;
       z-index: 1000;
@@ -23,13 +23,15 @@
       border-bottom: 2px solid #333;
     }
 
-    /* Novo layout: logo + título lado a lado */
+    /* Layout com logo + título lado a lado */
     .header-content {
       display: flex;
       align-items: center;
       justify-content: center;
       gap: 15px;
       flex-wrap: wrap;
+      padding-bottom: 10px;
+      border-bottom: 2px solid #00bfff; /* Linha azul moderna */
     }
 
     .logo {
@@ -58,16 +60,21 @@
       }
     }
 
+    nav {
+      margin-top: 10px;
+    }
+
     nav a {
       color: #fff;
       text-decoration: none;
       margin: 0 15px;
       font-weight: bold;
-      transition: color 0.3s;
+      transition: color 0.3s, transform 0.2s;
     }
 
     nav a:hover {
       color: #00bfff;
+      transform: scale(1.1);
     }
 
     main {
@@ -173,3 +180,4 @@
   </footer>
 </body>
 </html>
+
