@@ -3,128 +3,153 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Conrad - Documentação Oficial</title>
+  <title>ConradBR - Documentação Oficial</title>
   <style>
     body {
+      margin: 0;
+      font-family: "Segoe UI", Arial, sans-serif;
       background-color: #000;
       color: #fff;
-      font-family: Arial, Helvetica, sans-serif;
       line-height: 1.6;
-      margin: 0;
-      padding: 0;
     }
 
     header {
+      background-color: #111;
+      padding: 20px 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
       text-align: center;
-      padding: 50px 20px;
-      border-bottom: 2px solid #444;
+      border-bottom: 2px solid #333;
     }
 
-    header h1 {
-      font-size: 3em;
+    /* Logo com efeito de entrada */
+    header img {
+      width: 120px;
+      height: auto;
+      display: block;
+      margin: 0 auto 10px;
+      opacity: 0;
+      animation: fadeIn 1.5s ease forwards;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(-10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
       color: #00bfff;
-      margin-bottom: 10px;
     }
 
     main {
+      padding: 40px 20px;
       max-width: 900px;
-      margin: 50px auto;
-      padding: 20px;
-      background-color: #111;
-      border-radius: 10px;
-      box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+      margin: auto;
     }
 
     section {
-      margin-bottom: 50px;
+      margin-bottom: 60px;
     }
 
-    h2 {
+    h1, h2 {
       color: #00bfff;
-      border-bottom: 1px solid #00bfff;
-      padding-bottom: 10px;
-    }
-
-    p {
-      margin: 15px 0;
     }
 
     footer {
-      text-align: center;
-      padding: 30px;
       background-color: #111;
-      color: #888;
+      text-align: center;
+      padding: 20px;
       border-top: 2px solid #333;
+      color: #aaa;
     }
 
-    a {
-      color: #00bfff;
-      text-decoration: none;
-    }
+    @media (max-width: 600px) {
+      nav a {
+        display: block;
+        margin: 10px 0;
+      }
 
-    a:hover {
-      text-decoration: underline;
+      header img {
+        width: 100px;
+      }
     }
   </style>
 </head>
 <body>
-
   <header>
-    <h1>Bem-vindo ao Conrad</h1>
+    <!-- Caminho da logo corrigido -->
+    <img src="logo.png" alt="Logo ConradBR">
+    <nav>
+      <a href="#inicio">Início</a>
+      <a href="#privacidade">Política de Privacidade</a>
+      <a href="#termos">Termos de Serviço</a>
+    </nav>
   </header>
 
   <main>
-    <section id="politicas">
-      <h2>Políticas de Privacidade do Conrad</h2>
+    <section id="inicio">
+      <h1>Bem-vindo ao Site Oficial do ConradBR</h1>
+      <p>Esta é a página de documentação oficial do aplicativo <strong>Conrad</strong>. Aqui você encontra informações sobre as políticas de privacidade, termos de uso e funcionamento do app.</p>
+    </section>
+
+    <section id="privacidade">
+      <h2>Políticas de Privacidade</h2>
       <p><strong>Caro usuário,</strong></p>
       <p>Este documento explica como e onde seus dados são armazenados e como o Conrad garante a segurança dessas informações.</p>
 
       <h3>Armazenamento de Dados no Xano</h3>
-      <p>Quando você se cadastra no Conrad, seus dados, como email e senha, são armazenados no Xano. O Xano é uma plataforma que gerencia e protege dados pessoais. Seus dados são armazenados em uma tabela segura, garantindo que seu email e senha estejam protegidos contra acesso não autorizado. Nem mesmo o criador do aplicativo tem acesso à sua senha ou email.</p>
+      <p>Quando você se cadastra no Conrad, seus dados, como email e senha, são armazenados no Xano, uma plataforma segura de gerenciamento de dados.</p>
 
       <h3>Autenticação dos Seus Dados com o Facebook</h3>
-      <p>O Xano possui integração com o Facebook. Quando você se cadastra no Conrad, o Xano envia seus dados (como email e senha) para o Facebook, que valida suas credenciais. Através da URL de redirecionamento e da URL da plataforma em que o Conrad foi criado, o Facebook identifica o aplicativo em que você se cadastrou.</p>
+      <p>O Xano integra-se com o Facebook para validar suas credenciais durante o login. Nenhum dado sensível é compartilhado sem sua autorização.</p>
 
       <h3>Conexão do Conrad com o Facebook</h3>
-      <p>O aplicativo Conrad está conectado ao Facebook via integração com API. Uma API (Interface de Programação de Aplicações) permite que diferentes softwares se comuniquem. No AppGyver, plataforma onde o Conrad foi desenvolvido, há uma API REST que consome dados de outros sites, como o Facebook. Através da API REST do AppGyver, o aplicativo acessa dados do Facebook usando a Graph API do Facebook.</p>
+      <p>O Conrad utiliza a API Graph do Facebook por meio da API REST do AppGyver, garantindo comunicação segura e confiável.</p>
 
       <h3>Seus Direitos</h3>
-      <p>Você tem o direito de acessar, corrigir e excluir suas informações pessoais armazenadas pelo Conrad. Para exercer esses direitos, entre em contato conosco através do email <a href="mailto:claitonwr17@gmail.com">claitonwr17@gmail.com</a>.</p>
+      <p>Você pode acessar, corrigir ou excluir seus dados entrando em contato pelo email <strong>claitonwr17@gmail.com</strong>.</p>
 
       <h3>Segurança dos Dados</h3>
-      <p>Implementamos medidas de segurança técnicas e organizacionais para proteger seus dados contra perda, uso indevido e acesso não autorizado. Continuamos aprimorando nossas práticas de segurança conforme novas tecnologias e padrões se desenvolvem.</p>
-
-      <h3>Conclusão</h3>
-      <p>Esperamos que este documento tenha esclarecido como o aplicativo Conrad armazena e protege seus dados. Se você tiver qualquer dúvida ou preocupação, por favor, entre em contato conosco.</p>
+      <p>Medidas técnicas e organizacionais são adotadas para proteger suas informações contra acesso não autorizado.</p>
     </section>
 
     <section id="termos">
-      <h2>Termos de Serviço do Aplicativo Conrad</h2>
-
-      <h3>Introdução</h3>
-      <p>Bem-vindo ao Conrad. Este Termo de Serviço rege o uso do aplicativo de análise de postagens fornecido por Conrad Analítico de Postagens. Ao acessar ou usar o Conrad, você concorda em cumprir estes Termos.</p>
+      <h2>Termos de Serviço</h2>
+      <p><strong>Introdução</strong></p>
+      <p>Bem-vindo ao Conrad! Estes Termos de Serviço regem o uso do aplicativo de análise de postagens Conrad Analítico.</p>
 
       <h3>Descrição do Serviço</h3>
-      <p>O Conrad é um aplicativo que fornece análise de postagens em plataformas de mídia social. O serviço permite que você faça postagens nas redes sociais, e o aplicativo realiza uma análise de engajamento e desempenho.</p>
+      <p>O Conrad é um aplicativo que analisa postagens em redes sociais para medir engajamento e desempenho.</p>
 
       <h3>Uso do Aplicativo</h3>
       <ul>
-        <li><strong>Elegibilidade:</strong> Você precisa ser maior de idade para usar este aplicativo.</li>
-        <li><strong>Conta do Usuário:</strong> Para acessar certas funcionalidades, pode ser necessário criar uma conta. Você é responsável por manter a confidencialidade de suas credenciais.</li>
-        <li><strong>Uso Aceitável:</strong> Você concorda em não usar o aplicativo para fins ilegais, prejudiciais ou que violem os direitos de terceiros.</li>
+        <li><strong>Elegibilidade:</strong> O uso é permitido apenas para maiores de idade.</li>
+        <li><strong>Conta do Usuário:</strong> O usuário é responsável por suas credenciais.</li>
+        <li><strong>Uso Aceitável:</strong> É proibido usar o aplicativo para fins ilegais ou prejudiciais.</li>
       </ul>
 
       <h3>Análise de Postagens</h3>
-      <p><strong>Dados Coletados:</strong> Ao usar o aplicativo, você concorda que podemos coletar e analisar dados de suas postagens, incluindo textos, imagens e vídeos, para que o Conrad possa realizar a análise de seu conteúdo.</p>
-      <p><strong>Finalidade da Análise:</strong> Os dados coletados são usados para fornecer análises e insights sobre o desempenho de suas postagens.</p>
+      <p>O Conrad coleta e analisa textos, imagens e vídeos das postagens com o objetivo de oferecer insights sobre o desempenho do conteúdo.</p>
     </section>
   </main>
 
   <footer>
-    <p>© 2025 Conrad App — Todos os direitos reservados.</p>
+    <p>© 2025 ConradBR — Todos os direitos reservados.</p>
   </footer>
-
 </body>
 </html>
-
-
