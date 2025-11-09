@@ -23,7 +23,7 @@
     header h1 {
       font-size: 3em;
       color: #00bfff;
-      margin-bottom: 10px;
+      margin: 0;
     }
 
     main {
@@ -91,7 +91,10 @@
 <body>
 
   <header>
-    <h1>Bem-vindo ao Conrad</h1>
+    <div style="display: flex; align-items: center; justify-content: center; gap: 20px; flex-wrap: wrap;">
+      <img src="logo.png" alt="Logo do Conrad" style="width: 80px; height: 80px; border-radius: 10px;">
+      <h1>Bem-vindo ao Conrad</h1>
+    </div>
   </header>
 
   <main>
@@ -101,18 +104,47 @@
       <p>Este documento explica como e onde seus dados são armazenados e como o Conrad garante a segurança dessas informações.</p>
 
       <h3>Armazenamento de Dados no Xano</h3>
-      <p>Quando você se cadastra no Conrad, seus dados, como email e senha, são armazenados no Xano...</p>
-      <!-- (restante do conteúdo igual ao seu original) -->
+      <p>Quando você se cadastra no Conrad, seus dados, como email e senha, são armazenados no Xano. O Xano é uma plataforma que gerencia e protege dados pessoais. Seus dados são armazenados em uma tabela segura, garantindo que seu email e senha estejam protegidos contra acesso não autorizado. Nem mesmo o criador do aplicativo tem acesso à sua senha ou email.</p>
+
+      <h3>Autenticação dos Seus Dados com o Facebook</h3>
+      <p>O Xano possui integração com o Facebook. Quando você se cadastra no Conrad, o Xano envia seus dados (como email e senha) para o Facebook, que valida suas credenciais. Através da URL de redirecionamento e da URL da plataforma em que o Conrad foi criado, o Facebook identifica o aplicativo em que você se cadastrou.</p>
+
+      <h3>Conexão do Conrad com o Facebook</h3>
+      <p>O aplicativo Conrad está conectado ao Facebook via integração com API. Uma API (Interface de Programação de Aplicações) permite que diferentes softwares se comuniquem. No AppGyver, plataforma onde o Conrad foi desenvolvido, há uma API REST que consome dados de outros sites, como o Facebook. Através da API REST do AppGyver, o aplicativo acessa dados do Facebook usando a Graph API do Facebook.</p>
+
+      <h3>Seus Direitos</h3>
+      <p>Você tem o direito de acessar, corrigir e excluir suas informações pessoais armazenadas pelo Conrad. Para exercer esses direitos, entre em contato conosco através do email <a href="mailto:claitonwr17@gmail.com">claitonwr17@gmail.com</a>.</p>
+
+      <h3>Segurança dos Dados</h3>
+      <p>Implementamos medidas de segurança técnicas e organizacionais para proteger seus dados contra perda, uso indevido e acesso não autorizado. Continuamos aprimorando nossas práticas de segurança conforme novas tecnologias e padrões se desenvolvem.</p>
+
+      <h3>Conclusão</h3>
+      <p>Esperamos que este documento tenha esclarecido como o aplicativo Conrad armazena e protege seus dados. Se você tiver qualquer dúvida ou preocupação, por favor, entre em contato conosco.</p>
     </section>
 
     <section id="termos">
       <h2>Termos de Serviço do Aplicativo Conrad</h2>
-      <p>Bem-vindo ao Conrad. Este Termo de Serviço rege o uso do aplicativo...</p>
-      <!-- (restante do conteúdo igual ao seu original) -->
+
+      <h3>Introdução</h3>
+      <p>Bem-vindo ao Conrad. Este Termo de Serviço rege o uso do aplicativo de análise de postagens fornecido por Conrad Analítico de Postagens. Ao acessar ou usar o Conrad, você concorda em cumprir estes Termos.</p>
+
+      <h3>Descrição do Serviço</h3>
+      <p>O Conrad é um aplicativo que fornece análise de postagens em plataformas de mídia social. O serviço permite que você faça postagens nas redes sociais, e o aplicativo realiza uma análise de engajamento e desempenho.</p>
+
+      <h3>Uso do Aplicativo</h3>
+      <ul>
+        <li><strong>Elegibilidade:</strong> Você precisa ser maior de idade para usar este aplicativo.</li>
+        <li><strong>Conta do Usuário:</strong> Para acessar certas funcionalidades, pode ser necessário criar uma conta. Você é responsável por manter a confidencialidade de suas credenciais.</li>
+        <li><strong>Uso Aceitável:</strong> Você concorda em não usar o aplicativo para fins ilegais, prejudiciais ou que violem os direitos de terceiros.</li>
+      </ul>
+
+      <h3>Análise de Postagens</h3>
+      <p><strong>Dados Coletados:</strong> Ao usar o aplicativo, você concorda que podemos coletar e analisar dados de suas postagens, incluindo textos, imagens e vídeos, para que o Conrad possa realizar a análise de seu conteúdo.</p>
+      <p><strong>Finalidade da Análise:</strong> Os dados coletados são usados para fornecer análises e insights sobre o desempenho de suas postagens.</p>
     </section>
 
     <!-- Botão para acessar o app Conrad -->
-    <a href="#" class="btn-app" title="Acessar o App Conrad">
+    <a href="https://preview.appgyver.com/app/123456" target="_blank" class="btn-app" title="Acessar o App Conrad">
       🚀 Acessar o App Conrad
     </a>
 
